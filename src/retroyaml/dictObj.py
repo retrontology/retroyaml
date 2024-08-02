@@ -1,3 +1,4 @@
+
 class dictObj(object):
     
     def __init__(self, inObj: dict = dict()):
@@ -11,6 +12,9 @@ class dictObj(object):
                     self.__setattr__(obj, dictObj(inObj[obj]))
                 else:
                     self.__setattr__(obj, inObj[obj])
+    
+    def __getitem__(self, item):
+        return self.__to_dict__()[item]
 
     def __clear__(self):
         default_attributes = type(self)().__dir__()
@@ -30,4 +34,4 @@ class dictObj(object):
         return out
     
     def __str__(self):
-        return str(self.__to_dict__())
+        return str(self.__to_dict__().__str__())

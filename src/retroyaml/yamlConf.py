@@ -1,4 +1,4 @@
-from retroyaml.dictObj import dictObj
+from .dictObj import dictObj
 import yaml
 
 class yamlConf(dictObj):

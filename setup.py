@@ -7,7 +7,7 @@ with open(join(dir, 'README.md'), 'r') as readme:
 
 setup(
     name='retroyaml',
-    version='0.0.1',
+    version='0.0.2',
     license='MIT',
     license_files = ('LICENSE',),
     long_description=long_description,
